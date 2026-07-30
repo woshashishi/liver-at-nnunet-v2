@@ -3,3 +3,10 @@ Branch: research/cbam-transformer
 Git commit: 1f7bed9fe1cd2a5148e3072ea3b85671391be437
 Initialization date: 2026-07-30
 Current phase: Phase 0-1
+
+nnU-Net source record:
+Local source path: D:\系统默认\apps\nnUNet-master\nnUNet-master
+Fork branch: research/cbam-transformer
+Fork commit: 9c6fded54c5ff4367d4a3ef0790b167de3b5c85e
+Official upstream HEAD: 
+Official upstream URL: https://github.com/MIC-DKFZ/nnUNet.git
