@@ -1,0 +1,5 @@
+﻿Project: nnU-Net v2 Liver Segmentation
+Branch: research/cbam-transformer
+Git commit: 1f7bed9fe1cd2a5148e3072ea3b85671391be437
+Initialization date: 2026-07-30
+Current phase: Phase 0-1
