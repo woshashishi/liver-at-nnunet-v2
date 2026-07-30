@@ -1,0 +1,1 @@
+﻿run_id,date,dataset,model,trainer,configuration,plans,fold,seed,patch_size,batch_size,tokens,gpu,gpu_memory_gb,peak_allocated_gb,peak_reserved_gb,start_time,end_time,duration_hours,status,command,git_commit,result_path,notes
