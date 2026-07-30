@@ -1,0 +1,10 @@
+Record time: 2026-07-30 23:21:14
+Official nnU-Net path: /root/autodl-tmp/nnunet_project/code/nnUNet_official
+Official nnU-Net branch: master
+Official nnU-Net commit: 0e495086eb108ff79afe106291e8c15bd2f2bc3a
+Python: Python 3.10.8
+Pip: pip 26.2 from /root/miniconda3/lib/python3.10/site-packages/pip (python 3.10)
+PyTorch: 2.1.2+cu118
+PyTorch CUDA: 11.8
+CUDA available: True
+NVIDIA GeForce RTX 4090, 535.146.02, 24564 MiB
