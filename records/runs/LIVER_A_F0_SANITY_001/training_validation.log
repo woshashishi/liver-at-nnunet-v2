@@ -1,0 +1,147 @@
+RUN_ID=LIVER_A_F0_SANITY_001
+START_TIME=2026-08-03T15:53:43+08:00
+HOSTNAME=autodl-container-u5mr24sx6u-2003291b
+DATASET=Dataset003_Liver
+MODEL=A_Baseline
+TRAINER=nnUNetTrainer_5epochs
+FOLD=0
+PLANS=nnUNetPlans
+CONFIGURATION=3d_fullres
+PATCH_SIZE=128x128x128
+BATCH_SIZE=2
+BOTTLENECK_SHAPE_PLAN_DERIVED=4x4x4
+TOKENS_PLAN_DERIVED=64
+OFFICIAL_COMMIT=0e495086eb108ff79afe106291e8c15bd2f2bc3a
+PROJECT_COMMIT=aa58aa74a002621027f61ed16dd21770748d6bff
+COMMAND=nnUNetv2_train 3 3d_fullres 0 -tr nnUNetTrainer_5epochs -p nnUNetPlans --npz
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+2026-08-03 15:53:47.467924: Using torch.compile...
+2026-08-03 15:53:48.494699: do_dummy_2d_data_aug: False
+2026-08-03 15:53:48.495335: Creating new 5-fold cross-validation split...
+2026-08-03 15:53:48.496820: Desired fold for training: 0
+2026-08-03 15:53:48.496869: This split has 104 training and 27 validation cases.
+using pin_memory on device 0
+using pin_memory on device 0
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 128, 128], 'median_image_size_in_voxels': [482.0, 512.0, 512.0], 'spacing': [1.0, 0.767578125, 0.767578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': [32, 64, 128, 256, 320, 320], 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'strides': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'n_conv_per_stage': [2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2], 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ['conv_op', 'norm_op', 'dropout_op', 'nonlin']}, 'batch_dice': True} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset003_Liver', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 0.767578125, 0.767578125], 'original_median_shape_after_transp': [432, 512, 512], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 5420.0, 'mean': 99.48007202148438, 'median': 101.0, 'min': -983.0, 'percentile_00_5': -15.0, 'percentile_99_5': 197.0, 'std': 37.13840103149414}}} 
+
+2026-08-03 15:53:50.122081: Unable to plot network architecture: nnUNet_compile is enabled!
+2026-08-03 15:53:50.156039: 
+2026-08-03 15:53:50.156406: Epoch 0
+2026-08-03 15:53:50.156835: Current learning rate: 0.01
+2026-08-03 15:55:11.179440: train_loss 0.0788
+2026-08-03 15:55:11.180044: val_loss -0.0325
+2026-08-03 15:55:11.180266: Pseudo dice [0.764, 0.0]
+2026-08-03 15:55:11.180463: Epoch time: 81.03 s
+2026-08-03 15:55:11.180622: Yayy! New best EMA pseudo Dice: 0.382
+2026-08-03 15:55:12.710145: 
+2026-08-03 15:55:12.710445: Epoch 1
+2026-08-03 15:55:12.710543: Current learning rate: 0.00818
+2026-08-03 15:55:40.240813: train_loss -0.063
+2026-08-03 15:55:40.241160: val_loss -0.1021
+2026-08-03 15:55:40.241228: Pseudo dice [0.7854, 0.0]
+2026-08-03 15:55:40.241294: Epoch time: 27.53 s
+2026-08-03 15:55:40.241341: Yayy! New best EMA pseudo Dice: 0.3831
+2026-08-03 15:55:41.905352: 
+2026-08-03 15:55:41.905664: Epoch 2
+2026-08-03 15:55:41.905764: Current learning rate: 0.00631
+2026-08-03 15:56:09.492218: train_loss -0.1417
+2026-08-03 15:56:09.492445: val_loss -0.1602
+2026-08-03 15:56:09.492512: Pseudo dice [0.8188, 0.0]
+2026-08-03 15:56:09.492578: Epoch time: 27.59 s
+2026-08-03 15:56:09.492625: Yayy! New best EMA pseudo Dice: 0.3857
+2026-08-03 15:56:11.218244: 
+2026-08-03 15:56:11.218620: Epoch 3
+2026-08-03 15:56:11.218714: Current learning rate: 0.00438
+2026-08-03 15:56:38.793507: train_loss -0.201
+2026-08-03 15:56:38.793763: val_loss -0.3095
+2026-08-03 15:56:38.793833: Pseudo dice [0.8816, 0.3345]
+2026-08-03 15:56:38.793904: Epoch time: 27.58 s
+2026-08-03 15:56:38.793950: Yayy! New best EMA pseudo Dice: 0.4079
+2026-08-03 15:56:40.500122: 
+2026-08-03 15:56:40.500319: Epoch 4
+2026-08-03 15:56:40.500414: Current learning rate: 0.00235
+2026-08-03 15:57:08.092332: train_loss -0.274
+2026-08-03 15:57:08.092544: val_loss -0.2817
+2026-08-03 15:57:08.092867: Pseudo dice [0.8456, 0.4163]
+2026-08-03 15:57:08.093008: Epoch time: 27.59 s
+2026-08-03 15:57:08.093108: Yayy! New best EMA pseudo Dice: 0.4302
+2026-08-03 15:57:10.295892: Training done.
+2026-08-03 15:57:10.313757: Using splits from existing split file: /root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/splits_final.json
+2026-08-03 15:57:10.314225: The split file contains 5 splits.
+2026-08-03 15:57:10.314316: Desired fold for training: 0
+2026-08-03 15:57:10.314397: This split has 104 training and 27 validation cases.
+2026-08-03 15:57:10.314653: predicting liver_101
+2026-08-03 15:57:10.780011: liver_101, shape torch.Size([1, 478, 470, 470]), rank 0
+2026-08-03 15:58:04.272368: predicting liver_11
+2026-08-03 15:58:04.752011: liver_11, shape torch.Size([1, 466, 448, 448]), rank 0
+2026-08-03 15:58:33.036228: predicting liver_112
+2026-08-03 15:58:33.547117: liver_112, shape torch.Size([1, 601, 427, 427]), rank 0
+2026-08-03 15:59:09.808785: predicting liver_115
+2026-08-03 15:59:10.577113: liver_115, shape torch.Size([1, 677, 504, 504]), rank 0
+2026-08-03 16:00:05.379389: predicting liver_12
+2026-08-03 16:00:05.772392: liver_12, shape torch.Size([1, 455, 436, 436]), rank 0
+2026-08-03 16:00:33.972672: predicting liver_120
+2026-08-03 16:00:34.669063: liver_120, shape torch.Size([1, 636, 496, 496]), rank 0
+2026-08-03 16:01:23.912181: predicting liver_128
+2026-08-03 16:01:24.506550: liver_128, shape torch.Size([1, 458, 521, 521]), rank 0
+2026-08-03 16:02:14.475814: predicting liver_17
+2026-08-03 16:02:15.150958: liver_17, shape torch.Size([1, 661, 496, 496]), rank 0
+2026-08-03 16:03:09.875507: predicting liver_19
+2026-08-03 16:03:10.356090: liver_19, shape torch.Size([1, 438, 502, 502]), rank 0
+2026-08-03 16:03:43.267155: predicting liver_24
+2026-08-03 16:03:43.664846: liver_24, shape torch.Size([1, 414, 447, 447]), rank 0
+2026-08-03 16:04:07.868568: predicting liver_25
+2026-08-03 16:04:08.386963: liver_25, shape torch.Size([1, 421, 512, 512]), rank 0
+2026-08-03 16:04:41.253583: predicting liver_27
+2026-08-03 16:04:41.903809: liver_27, shape torch.Size([1, 603, 492, 492]), rank 0
+2026-08-03 16:05:31.137520: predicting liver_3
+2026-08-03 16:05:31.728780: liver_3, shape torch.Size([1, 534, 462, 462]), rank 0
+2026-08-03 16:06:15.498611: predicting liver_38
+2026-08-03 16:06:15.753514: liver_38, shape torch.Size([1, 132, 667, 667]), rank 0
+2026-08-03 16:06:38.090185: predicting liver_40
+2026-08-03 16:06:38.319335: liver_40, shape torch.Size([1, 122, 667, 667]), rank 0
+2026-08-03 16:06:49.722932: predicting liver_41
+2026-08-03 16:06:49.954433: liver_41, shape torch.Size([1, 113, 667, 667]), rank 0
+2026-08-03 16:07:01.320688: predicting liver_42
+2026-08-03 16:07:01.579661: liver_42, shape torch.Size([1, 125, 667, 667]), rank 0
+2026-08-03 16:07:12.965094: predicting liver_44
+2026-08-03 16:07:13.226910: liver_44, shape torch.Size([1, 119, 667, 667]), rank 0
+2026-08-03 16:07:24.613002: predicting liver_5
+2026-08-03 16:07:25.391527: liver_5, shape torch.Size([1, 430, 646, 646]), rank 0
+2026-08-03 16:08:32.363553: predicting liver_51
+2026-08-03 16:08:33.325648: liver_51, shape torch.Size([1, 681, 602, 602]), rank 0
+2026-08-03 16:10:03.745715: predicting liver_52
+2026-08-03 16:10:04.568003: liver_52, shape torch.Size([1, 592, 558, 558]), rank 0
+2026-08-03 16:11:08.989533: predicting liver_58
+2026-08-03 16:11:09.393939: liver_58, shape torch.Size([1, 424, 456, 456]), rank 0
+2026-08-03 16:11:42.238955: predicting liver_64
+2026-08-03 16:11:42.814600: liver_64, shape torch.Size([1, 460, 519, 519]), rank 0
+2026-08-03 16:12:32.812221: predicting liver_70
+2026-08-03 16:12:33.120209: liver_70, shape torch.Size([1, 416, 399, 399]), rank 0
+2026-08-03 16:12:57.269376: predicting liver_75
+2026-08-03 16:12:57.707943: liver_75, shape torch.Size([1, 445, 505, 505]), rank 0
+2026-08-03 16:13:30.636248: predicting liver_77
+2026-08-03 16:13:31.168525: liver_77, shape torch.Size([1, 470, 521, 521]), rank 0
+2026-08-03 16:14:21.249849: predicting liver_82
+2026-08-03 16:14:21.567966: liver_82, shape torch.Size([1, 416, 417, 417]), rank 0
+2026-08-03 16:17:07.412815: Validation complete
+2026-08-03 16:17:07.413069: Mean Validation Dice:  0.447886712450456
+END_TIME=2026-08-03T16:17:09+08:00
+EXIT_CODE=0

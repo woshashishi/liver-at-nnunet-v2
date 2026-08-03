@@ -1,0 +1,13 @@
+
+# Large nnU-Net artifacts
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.nii
+*.nii.gz
+*.b2nd
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+datasets/

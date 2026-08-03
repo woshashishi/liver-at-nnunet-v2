@@ -1,0 +1,738 @@
+{
+    "foreground_mean": {
+        "Dice": 0.447886712450456,
+        "FN": 122230.77777777778,
+        "FP": 943537.425925926,
+        "IoU": 0.34320152963619377,
+        "TN": 104644701.8148148,
+        "TP": 1215154.8703703703,
+        "n_pred": 2158692.296296296,
+        "n_ref": 1337385.648148148
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.7268396697789327,
+            "FN": 222127.37037037036,
+            "FP": 1595358.1851851852,
+            "IoU": 0.5759133677164762,
+            "TN": 102724937.85185185,
+            "TP": 2383201.4814814813,
+            "n_pred": 3978559.6666666665,
+            "n_ref": 2605328.8518518517
+        },
+        "2": {
+            "Dice": 0.16893375512197936,
+            "FN": 22334.185185185186,
+            "FP": 291716.6666666667,
+            "IoU": 0.11048969155591142,
+            "TN": 106564465.77777778,
+            "TP": 47108.25925925926,
+            "n_pred": 338824.9259259259,
+            "n_ref": 69442.44444444444
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7490280093783285,
+                    "FN": 339425,
+                    "FP": 3776607,
+                    "IoU": 0.5987568186927178,
+                    "TN": 168786154,
+                    "TP": 6142166,
+                    "n_pred": 9918773,
+                    "n_ref": 6481591
+                },
+                "2": {
+                    "Dice": 0.4734307090046809,
+                    "FN": 109657,
+                    "FP": 488244,
+                    "IoU": 0.3101272322175467,
+                    "TN": 178177669,
+                    "TP": 268782,
+                    "n_pred": 757026,
+                    "n_ref": 378439
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_101.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_101.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6664334152282216,
+                    "FN": 226776,
+                    "FP": 2803072,
+                    "IoU": 0.4997376380289797,
+                    "TN": 116102586,
+                    "TP": 3026670,
+                    "n_pred": 5829742,
+                    "n_ref": 3253446
+                },
+                "2": {
+                    "Dice": 0.03103081432026687,
+                    "FN": 3884,
+                    "FP": 412359,
+                    "IoU": 0.015759928873419277,
+                    "TN": 121736196,
+                    "TP": 6665,
+                    "n_pred": 419024,
+                    "n_ref": 10549
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_11.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_11.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6118450881161254,
+                    "FN": 344191,
+                    "FP": 4264250,
+                    "IoU": 0.44076138972543505,
+                    "TN": 188629581,
+                    "TP": 3632122,
+                    "n_pred": 7896372,
+                    "n_ref": 3976313
+                },
+                "2": {
+                    "Dice": 0.0019941319734135287,
+                    "FN": 501,
+                    "FP": 680140,
+                    "IoU": 0.000998061119501674,
+                    "TN": 196188823,
+                    "TP": 680,
+                    "n_pred": 680820,
+                    "n_ref": 1181
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_112.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_112.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6163895283768638,
+                    "FN": 246790,
+                    "FP": 3565392,
+                    "IoU": 0.44549354100635497,
+                    "TN": 214898914,
+                    "TP": 3062728,
+                    "n_pred": 6628120,
+                    "n_ref": 3309518
+                },
+                "2": {
+                    "Dice": 0.0,
+                    "FN": 0,
+                    "FP": 649950,
+                    "IoU": 0.0,
+                    "TN": 221123874,
+                    "TP": 0,
+                    "n_pred": 649950,
+                    "n_ref": 0
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_115.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_115.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7624294861949376,
+                    "FN": 184164,
+                    "FP": 2321630,
+                    "IoU": 0.6160695311419101,
+                    "TN": 112748833,
+                    "TP": 4020893,
+                    "n_pred": 6342523,
+                    "n_ref": 4205057
+                },
+                "2": {
+                    "Dice": 0.0003774681863738323,
+                    "FN": 703,
+                    "FP": 460089,
+                    "IoU": 0.00018876972046893002,
+                    "TN": 118814641,
+                    "TP": 87,
+                    "n_pred": 460176,
+                    "n_ref": 790
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_12.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_12.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6385207004341729,
+                    "FN": 102348,
+                    "FP": 1944359,
+                    "IoU": 0.4689903846777514,
+                    "TN": 107294687,
+                    "TP": 1807662,
+                    "n_pred": 3752021,
+                    "n_ref": 1910010
+                },
+                "2": {
+                    "Dice": 0.002827282573530446,
+                    "FN": 4829,
+                    "FP": 278739,
+                    "IoU": 0.0014156424974469135,
+                    "TN": 110865086,
+                    "TP": 402,
+                    "n_pred": 279141,
+                    "n_ref": 5231
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_120.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_120.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8089758927295553,
+                    "FN": 423185,
+                    "FP": 1841329,
+                    "IoU": 0.6792271355309031,
+                    "TN": 164382620,
+                    "TP": 4795042,
+                    "n_pred": 6636371,
+                    "n_ref": 5218227
+                },
+                "2": {
+                    "Dice": 0.46701210537690135,
+                    "FN": 98571,
+                    "FP": 421808,
+                    "IoU": 0.30464174375735775,
+                    "TN": 170693815,
+                    "TP": 227982,
+                    "n_pred": 649790,
+                    "n_ref": 326553
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_128.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_128.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7192689754316589,
+                    "FN": 309078,
+                    "FP": 2246341,
+                    "IoU": 0.561608145374695,
+                    "TN": 210701869,
+                    "TP": 3273656,
+                    "n_pred": 5519997,
+                    "n_ref": 3582734
+                },
+                "2": {
+                    "Dice": 0.1397314701872713,
+                    "FN": 6517,
+                    "FP": 377149,
+                    "IoU": 0.07511360212137648,
+                    "TN": 216116119,
+                    "TP": 31159,
+                    "n_pred": 408308,
+                    "n_ref": 37676
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_17.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_17.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6840498053365383,
+                    "FN": 684797,
+                    "FP": 2249774,
+                    "IoU": 0.519814357800582,
+                    "TN": 137281442,
+                    "TP": 3176755,
+                    "n_pred": 5426529,
+                    "n_ref": 3861552
+                },
+                "2": {
+                    "Dice": 0.04716966708710775,
+                    "FN": 6187,
+                    "FP": 492391,
+                    "IoU": 0.02415451372918212,
+                    "TN": 142881849,
+                    "TP": 12341,
+                    "n_pred": 504732,
+                    "n_ref": 18528
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_19.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_19.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7667975216714049,
+                    "FN": 64919,
+                    "FP": 1136959,
+                    "IoU": 0.6217936917469336,
+                    "TN": 69173907,
+                    "TP": 1975959,
+                    "n_pred": 3112918,
+                    "n_ref": 2040878
+                },
+                "2": {
+                    "Dice": 0.0,
+                    "FN": 1422,
+                    "FP": 257895,
+                    "IoU": 0.0,
+                    "TN": 72092427,
+                    "TP": 0,
+                    "n_pred": 257895,
+                    "n_ref": 1422
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_24.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_24.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7299629759807268,
+                    "FN": 102661,
+                    "FP": 2059297,
+                    "IoU": 0.5747572410689418,
+                    "TN": 152464488,
+                    "TP": 2922098,
+                    "n_pred": 4981395,
+                    "n_ref": 3024759
+                },
+                "2": {
+                    "Dice": 0.0008359772596398628,
+                    "FN": 266,
+                    "FP": 449131,
+                    "IoU": 0.0004181634173738003,
+                    "TN": 157098959,
+                    "TP": 188,
+                    "n_pred": 449319,
+                    "n_ref": 454
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_25.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_25.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7735624141841628,
+                    "FN": 340979,
+                    "FP": 1322852,
+                    "IoU": 0.630739324308609,
+                    "TN": 221200140,
+                    "TP": 2842013,
+                    "n_pred": 4164865,
+                    "n_ref": 3182992
+                },
+                "2": {
+                    "Dice": 0.5398677570846275,
+                    "FN": 31918,
+                    "FP": 233703,
+                    "IoU": 0.36973894638933574,
+                    "TN": 225284538,
+                    "TP": 155825,
+                    "n_pred": 389528,
+                    "n_ref": 187743
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_27.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_27.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.711295084467884,
+                    "FN": 285286,
+                    "FP": 2116473,
+                    "IoU": 0.5519456594717689,
+                    "TN": 134624477,
+                    "TP": 2958660,
+                    "n_pred": 5075133,
+                    "n_ref": 3243946
+                },
+                "2": {
+                    "Dice": 0.009822367738781316,
+                    "FN": 1467,
+                    "FP": 265877,
+                    "IoU": 0.00493542263743626,
+                    "TN": 139716226,
+                    "TP": 1326,
+                    "n_pred": 267203,
+                    "n_ref": 2793
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_3.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_3.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7207238177653045,
+                    "FN": 233540,
+                    "FP": 897304,
+                    "IoU": 0.5633840665323048,
+                    "TN": 32012988,
+                    "TP": 1459176,
+                    "n_pred": 2356480,
+                    "n_ref": 1692716
+                },
+                "2": {
+                    "Dice": 0.0,
+                    "FN": 0,
+                    "FP": 85950,
+                    "IoU": 0.0,
+                    "TN": 34517058,
+                    "TP": 0,
+                    "n_pred": 85950,
+                    "n_ref": 0
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_38.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_38.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6453929602618482,
+                    "FN": 179805,
+                    "FP": 1755142,
+                    "IoU": 0.47644293978171265,
+                    "TN": 28285797,
+                    "TP": 1760824,
+                    "n_pred": 3515966,
+                    "n_ref": 1940629
+                },
+                "2": {
+                    "Dice": 0.22860732997927996,
+                    "FN": 52254,
+                    "FP": 421675,
+                    "IoU": 0.12905514053900083,
+                    "TN": 31437413,
+                    "TP": 70226,
+                    "n_pred": 491901,
+                    "n_ref": 122480
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_40.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_40.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7542842246810778,
+                    "FN": 53781,
+                    "FP": 975530,
+                    "IoU": 0.6055026673223027,
+                    "TN": 27013101,
+                    "TP": 1579860,
+                    "n_pred": 2555390,
+                    "n_ref": 1633641
+                },
+                "2": {
+                    "Dice": 0.0,
+                    "FN": 0,
+                    "FP": 363954,
+                    "IoU": 0.0,
+                    "TN": 29258318,
+                    "TP": 0,
+                    "n_pred": 363954,
+                    "n_ref": 0
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_41.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_41.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7880832083584667,
+                    "FN": 106253,
+                    "FP": 583039,
+                    "IoU": 0.650278314314808,
+                    "TN": 30797027,
+                    "TP": 1281681,
+                    "n_pred": 1864720,
+                    "n_ref": 1387934
+                },
+                "2": {
+                    "Dice": 0.01297097315529168,
+                    "FN": 467,
+                    "FP": 177748,
+                    "IoU": 0.0065278226840444625,
+                    "TN": 32588614,
+                    "TP": 1171,
+                    "n_pred": 178919,
+                    "n_ref": 1638
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_42.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_42.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7977642107585562,
+                    "FN": 119802,
+                    "FP": 793167,
+                    "IoU": 0.6635671786662657,
+                    "TN": 28481462,
+                    "TP": 1800705,
+                    "n_pred": 2593872,
+                    "n_ref": 1920507
+                },
+                "2": {
+                    "Dice": 0.36934591341987855,
+                    "FN": 94349,
+                    "FP": 218603,
+                    "IoU": 0.22650169429525474,
+                    "TN": 30790543,
+                    "TP": 91641,
+                    "n_pred": 310244,
+                    "n_ref": 185990
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_44.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_44.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.779928305531368,
+                    "FN": 271100,
+                    "FP": 654930,
+                    "IoU": 0.6392479303202292,
+                    "TN": 138204385,
+                    "TP": 1640913,
+                    "n_pred": 2295843,
+                    "n_ref": 1912013
+                },
+                "2": {
+                    "Dice": 0.0035103768868275766,
+                    "FN": 375,
+                    "FP": 93302,
+                    "IoU": 0.001758274546578291,
+                    "TN": 140677486,
+                    "TP": 165,
+                    "n_pred": 93467,
+                    "n_ref": 540
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_5.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_5.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7152202587952068,
+                    "FN": 67167,
+                    "FP": 401980,
+                    "IoU": 0.5566870614915783,
+                    "TN": 58448413,
+                    "TP": 589128,
+                    "n_pred": 991108,
+                    "n_ref": 656295
+                },
+                "2": {
+                    "Dice": 0.6561910506479386,
+                    "FN": 39496,
+                    "FP": 49993,
+                    "IoU": 0.48830680206760896,
+                    "TN": 59331800,
+                    "TP": 85399,
+                    "n_pred": 135392,
+                    "n_ref": 124895
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_51.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_51.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.500904895786725,
+                    "FN": 28741,
+                    "FP": 1391224,
+                    "IoU": 0.3341381706730341,
+                    "TN": 59995606,
+                    "TP": 712557,
+                    "n_pred": 2103781,
+                    "n_ref": 741298
+                },
+                "2": {
+                    "Dice": 0.08867003791548872,
+                    "FN": 8275,
+                    "FP": 197712,
+                    "IoU": 0.04639180030369246,
+                    "TN": 61912120,
+                    "TP": 10021,
+                    "n_pred": 207733,
+                    "n_ref": 18296
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_52.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_52.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8403651628922738,
+                    "FN": 204659,
+                    "FP": 224930,
+                    "IoU": 0.7246808529728628,
+                    "TN": 54014197,
+                    "TP": 1130742,
+                    "n_pred": 1355672,
+                    "n_ref": 1335401
+                },
+                "2": {
+                    "Dice": 0.006679976394068382,
+                    "FN": 1177,
+                    "FP": 77932,
+                    "IoU": 0.0033511811023622046,
+                    "TN": 55495153,
+                    "TP": 266,
+                    "n_pred": 78198,
+                    "n_ref": 1443
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_58.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_58.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8024531485594024,
+                    "FN": 116275,
+                    "FP": 631829,
+                    "IoU": 0.6700807969175365,
+                    "TN": 58025583,
+                    "TP": 1519433,
+                    "n_pred": 2151262,
+                    "n_ref": 1635708
+                },
+                "2": {
+                    "Dice": 0.6003581358627871,
+                    "FN": 74154,
+                    "FP": 65556,
+                    "IoU": 0.4289369668382049,
+                    "TN": 60048471,
+                    "TP": 104939,
+                    "n_pred": 170495,
+                    "n_ref": 179093
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_64.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_64.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7542168832415544,
+                    "FN": 514054,
+                    "FP": 612488,
+                    "IoU": 0.6054158810596526,
+                    "TN": 84438941,
+                    "TP": 1728469,
+                    "n_pred": 2340957,
+                    "n_ref": 2242523
+                },
+                "2": {
+                    "Dice": 0.4207324619441562,
+                    "FN": 32275,
+                    "FP": 211117,
+                    "IoU": 0.2664098715421572,
+                    "TN": 86962170,
+                    "TP": 88390,
+                    "n_pred": 299507,
+                    "n_ref": 120665
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_70.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_70.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7589213481892285,
+                    "FN": 65039,
+                    "FP": 280635,
+                    "IoU": 0.6115014121642809,
+                    "TN": 22441047,
+                    "TP": 544095,
+                    "n_pred": 824730,
+                    "n_ref": 609134
+                },
+                "2": {
+                    "Dice": 0.03295112346536947,
+                    "FN": 1565,
+                    "FP": 65231,
+                    "IoU": 0.016751552977890306,
+                    "TN": 23262882,
+                    "TP": 1138,
+                    "n_pred": 66369,
+                    "n_ref": 2703
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_75.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_75.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7264074754808885,
+                    "FN": 44825,
+                    "FP": 387449,
+                    "IoU": 0.570360976133374,
+                    "TN": 23635403,
+                    "TP": 573859,
+                    "n_pred": 961308,
+                    "n_ref": 618684
+                },
+                "2": {
+                    "Dice": 0.034715328467153285,
+                    "FN": 3045,
+                    "FP": 63077,
+                    "IoU": 0.017664274784210603,
+                    "TN": 24574225,
+                    "TP": 1189,
+                    "n_pred": 64266,
+                    "n_ref": 4234
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_77.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_77.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8014462861987013,
+                    "FN": 337799,
+                    "FP": 1836689,
+                    "IoU": 0.6686778214193314,
+                    "TN": 129489674,
+                    "TP": 4388574,
+                    "n_pred": 6225263,
+                    "n_ref": 4726373
+                },
+                "2": {
+                    "Dice": 0.392378929362609,
+                    "FN": 29669,
+                    "FP": 317025,
+                    "IoU": 0.2440742638481581,
+                    "TN": 135594101,
+                    "TP": 111941,
+                    "n_pred": 428966,
+                    "n_ref": 141610
+                }
+            },
+            "prediction_file": "/root/autodl-tmp/nnunet_project/nnUNet_results/Dataset003_Liver/nnUNetTrainer_5epochs__nnUNetPlans__3d_fullres/fold_0/validation/liver_82.nii.gz",
+            "reference_file": "/root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/gt_segmentations/liver_82.nii.gz"
+        }
+    ]
+}
