@@ -1,0 +1,73 @@
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+2026-08-04 01:16:19.731406: Using torch.compile...
+2026-08-04 01:16:21.443406: Using splits from existing split file: /root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/splits_final.json
+2026-08-04 01:16:21.443619: The split file contains 5 splits.
+2026-08-04 01:16:21.443655: Desired fold for training: 0
+2026-08-04 01:16:21.443682: This split has 104 training and 27 validation cases.
+2026-08-04 01:16:21.443779: predicting liver_101
+2026-08-04 01:16:21.906249: liver_101, shape torch.Size([1, 478, 470, 470]), rank 0
+2026-08-04 01:17:15.909252: predicting liver_11
+2026-08-04 01:17:16.390496: liver_11, shape torch.Size([1, 466, 448, 448]), rank 0
+2026-08-04 01:17:44.508939: predicting liver_112
+2026-08-04 01:17:45.031637: liver_112, shape torch.Size([1, 601, 427, 427]), rank 0
+2026-08-04 01:18:21.206113: predicting liver_115
+2026-08-04 01:18:21.963288: liver_115, shape torch.Size([1, 677, 504, 504]), rank 0
+2026-08-04 01:19:16.732157: predicting liver_12
+2026-08-04 01:19:17.116339: liver_12, shape torch.Size([1, 455, 436, 436]), rank 0
+2026-08-04 01:19:45.284570: predicting liver_120
+2026-08-04 01:19:45.965088: liver_120, shape torch.Size([1, 636, 496, 496]), rank 0
+2026-08-04 01:20:35.162481: predicting liver_128
+2026-08-04 01:20:35.756268: liver_128, shape torch.Size([1, 458, 521, 521]), rank 0
+2026-08-04 01:21:25.691556: predicting liver_17
+2026-08-04 01:21:26.441128: liver_17, shape torch.Size([1, 661, 496, 496]), rank 0
+2026-08-04 01:22:21.015708: predicting liver_19
+2026-08-04 01:22:21.530858: liver_19, shape torch.Size([1, 438, 502, 502]), rank 0
+2026-08-04 01:22:54.397997: predicting liver_24
+2026-08-04 01:22:54.801672: liver_24, shape torch.Size([1, 414, 447, 447]), rank 0
+2026-08-04 01:23:18.948806: predicting liver_25
+2026-08-04 01:23:19.469992: liver_25, shape torch.Size([1, 421, 512, 512]), rank 0
+2026-08-04 01:23:52.263304: predicting liver_27
+2026-08-04 01:23:52.898510: liver_27, shape torch.Size([1, 603, 492, 492]), rank 0
+2026-08-04 01:24:42.029146: predicting liver_3
+2026-08-04 01:24:42.595406: liver_3, shape torch.Size([1, 534, 462, 462]), rank 0
+2026-08-04 01:25:26.266453: predicting liver_38
+2026-08-04 01:25:26.522943: liver_38, shape torch.Size([1, 132, 667, 667]), rank 0
+2026-08-04 01:25:48.802892: predicting liver_40
+2026-08-04 01:25:49.077195: liver_40, shape torch.Size([1, 122, 667, 667]), rank 0
+2026-08-04 01:26:00.461303: predicting liver_41
+2026-08-04 01:26:00.704375: liver_41, shape torch.Size([1, 113, 667, 667]), rank 0
+2026-08-04 01:26:12.059094: predicting liver_42
+2026-08-04 01:26:12.324347: liver_42, shape torch.Size([1, 125, 667, 667]), rank 0
+2026-08-04 01:26:23.688686: predicting liver_44
+2026-08-04 01:26:23.958174: liver_44, shape torch.Size([1, 119, 667, 667]), rank 0
+2026-08-04 01:26:35.333118: predicting liver_5
+2026-08-04 01:26:36.090677: liver_5, shape torch.Size([1, 430, 646, 646]), rank 0
+2026-08-04 01:27:42.881239: predicting liver_51
+2026-08-04 01:27:43.858210: liver_51, shape torch.Size([1, 681, 602, 602]), rank 0
+2026-08-04 01:29:14.125946: predicting liver_52
+2026-08-04 01:29:14.986152: liver_52, shape torch.Size([1, 592, 558, 558]), rank 0
+2026-08-04 01:30:19.270802: predicting liver_58
+2026-08-04 01:30:19.670434: liver_58, shape torch.Size([1, 424, 456, 456]), rank 0
+2026-08-04 01:30:52.451341: predicting liver_64
+2026-08-04 01:30:53.052558: liver_64, shape torch.Size([1, 460, 519, 519]), rank 0
+2026-08-04 01:31:42.913350: predicting liver_70
+2026-08-04 01:31:43.199134: liver_70, shape torch.Size([1, 416, 399, 399]), rank 0
+2026-08-04 01:32:07.271752: predicting liver_75
+2026-08-04 01:32:07.719052: liver_75, shape torch.Size([1, 445, 505, 505]), rank 0
+2026-08-04 01:32:40.571576: predicting liver_77
+2026-08-04 01:32:41.108813: liver_77, shape torch.Size([1, 470, 521, 521]), rank 0
+2026-08-04 01:33:31.098424: predicting liver_82
+2026-08-04 01:33:31.414265: liver_82, shape torch.Size([1, 416, 417, 417]), rank 0
+2026-08-04 01:36:13.517007: Validation complete
+2026-08-04 01:36:13.517239: Mean Validation Dice:  0.8200353257447459
