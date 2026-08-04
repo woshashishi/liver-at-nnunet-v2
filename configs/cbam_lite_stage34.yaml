@@ -15,7 +15,8 @@ encoder:
 cbam_lite:
   channel_reduction_ratio: 16
   spatial_kernel_size: [3, 3, 3]
-  gating: sequential_multiplicative
+  gating: residual_sequential_multiplicative
+  residual_scale: 1.0
   preserves_tensor_shape: true
-sanity_trainer: nnUNetTrainer_CBAMLite_5epochs
-formal_trainer: nnUNetTrainer_CBAMLite
+sanity_trainer: nnUNetTrainer_CBAMLiteResidual_5epochs
+formal_trainer: nnUNetTrainer_CBAMLiteResidual

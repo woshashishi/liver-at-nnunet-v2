@@ -61,9 +61,15 @@ class CBAMLite3D(nn.Module):
         channels: int,
         reduction: int = 16,
         spatial_kernel_size: int = 3,
+        residual_scale: float = 1.0,
     ) -> None:
         super().__init__()
+        if residual_scale < 0:
+            raise ValueError(
+                f"residual_scale must be non-negative, got {residual_scale}"
+            )
         self.channels = channels
+        self.residual_scale = float(residual_scale)
         self.channel_attention = ChannelAttention3D(channels, reduction)
         self.spatial_attention = SpatialAttention3D(spatial_kernel_size)
 
@@ -72,6 +78,7 @@ class CBAMLite3D(nn.Module):
             raise ValueError(f"CBAMLite3D expects NCDHW input, got {tuple(x.shape)}")
         if x.shape[1] != self.channels:
             raise ValueError(f"Expected {self.channels} channels, got {x.shape[1]}")
-        x = x * self.channel_attention(x)
-        x = x * self.spatial_attention(x)
-        return x
+        residual = x
+        attended = x * self.channel_attention(x)
+        attended = attended * self.spatial_attention(attended)
+        return residual + self.residual_scale * attended

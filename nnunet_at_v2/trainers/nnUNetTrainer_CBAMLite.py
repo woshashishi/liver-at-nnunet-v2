@@ -92,3 +92,11 @@ class nnUNetTrainer_CBAMLite_5epochs(nnUNetTrainer_CBAMLite):
             device=device,
         )
         self.num_epochs = 5
+
+class nnUNetTrainer_CBAMLiteResidual(nnUNetTrainer_CBAMLite):
+    """Residual CBAM-lite formal trainer with a distinct result namespace."""
+
+
+class nnUNetTrainer_CBAMLiteResidual_5epochs(nnUNetTrainer_CBAMLite_5epochs):
+    """Five-epoch residual CBAM-lite sanity trainer."""
+
