@@ -11,3 +11,7 @@ nnUNet_raw/
 nnUNet_preprocessed/
 nnUNet_results/
 datasets/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.zip

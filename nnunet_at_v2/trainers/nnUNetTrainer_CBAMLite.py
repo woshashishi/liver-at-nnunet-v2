@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Sequence
 
+import torch
 from torch import nn
 
 from nnunetv2.training.nnUNetTrainer.nnUNetTrainer import nnUNetTrainer
@@ -75,6 +76,21 @@ class nnUNetTrainer_CBAMLite(nnUNetTrainer):
 class nnUNetTrainer_CBAMLite_5epochs(nnUNetTrainer_CBAMLite):
     """Five-epoch engineering sanity trainer. Not a paper result."""
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        plans: dict,
+        configuration: str,
+        fold: int,
+        dataset_json: dict,
+        unpack_dataset: bool = True,
+        device: torch.device = torch.device("cuda"),
+    ) -> None:
+        super().__init__(
+            plans=plans,
+            configuration=configuration,
+            fold=fold,
+            dataset_json=dataset_json,
+            unpack_dataset=unpack_dataset,
+            device=device,
+        )
         self.num_epochs = 5
