@@ -79,6 +79,11 @@ class CBAMLite3D(nn.Module):
         if x.shape[1] != self.channels:
             raise ValueError(f"Expected {self.channels} channels, got {x.shape[1]}")
         residual = x
-        attended = x * self.channel_attention(x)
-        attended = attended * self.spatial_attention(attended)
-        return residual + self.residual_scale * attended
+
+        with torch.autocast(device_type=x.device.type, enabled=False):
+            x_float = x.float()
+            attended = x_float * self.channel_attention(x_float)
+            attended = attended * self.spatial_attention(attended)
+            output = x_float + self.residual_scale.float() * attended
+
+        return output.to(dtype=residual.dtype)
