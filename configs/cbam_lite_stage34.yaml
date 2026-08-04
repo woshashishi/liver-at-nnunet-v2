@@ -1,0 +1,21 @@
+experiment_group: B
+model_name: nnUNet_CBAMLite
+dataset: Dataset003_Liver
+configuration: 3d_fullres
+plans: nnUNetPlans
+fold_for_screening: 0
+baseline_protocol:
+  patch_size: [128, 128, 128]
+  batch_size: 2
+  epochs_formal: 1000
+encoder:
+  output_channels: [32, 64, 128, 256, 320, 320]
+  cbam_stage_indices: [3, 4]
+  untouched_bottleneck_stage: 5
+cbam_lite:
+  channel_reduction_ratio: 16
+  spatial_kernel_size: [3, 3, 3]
+  gating: sequential_multiplicative
+  preserves_tensor_shape: true
+sanity_trainer: nnUNetTrainer_CBAMLite_5epochs
+formal_trainer: nnUNetTrainer_CBAMLite
