@@ -82,7 +82,6 @@ class nnUNetTrainer_CBAMLite_5epochs(nnUNetTrainer_CBAMLite):
         configuration: str,
         fold: int,
         dataset_json: dict,
-        unpack_dataset: bool = True,
         device: torch.device = torch.device("cuda"),
     ) -> None:
         super().__init__(
@@ -90,7 +89,6 @@ class nnUNetTrainer_CBAMLite_5epochs(nnUNetTrainer_CBAMLite):
             configuration=configuration,
             fold=fold,
             dataset_json=dataset_json,
-            unpack_dataset=unpack_dataset,
             device=device,
         )
         self.num_epochs = 5
