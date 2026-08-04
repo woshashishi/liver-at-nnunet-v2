@@ -100,3 +100,10 @@ class nnUNetTrainer_CBAMLiteResidual(nnUNetTrainer_CBAMLite):
 class nnUNetTrainer_CBAMLiteResidual_5epochs(nnUNetTrainer_CBAMLite_5epochs):
     """Five-epoch residual CBAM-lite sanity trainer."""
 
+
+class nnUNetTrainer_CBAMLiteZeroInit(nnUNetTrainer_CBAMLite):
+    """CBAM-lite with learnable residual gates initialized to zero."""
+
+
+class nnUNetTrainer_CBAMLiteZeroInit_5epochs(nnUNetTrainer_CBAMLite_5epochs):
+    """Five-epoch zero-initialized CBAM-lite sanity trainer."""

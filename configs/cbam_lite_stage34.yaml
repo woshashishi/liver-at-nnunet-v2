@@ -16,7 +16,7 @@ cbam_lite:
   channel_reduction_ratio: 16
   spatial_kernel_size: [3, 3, 3]
   gating: residual_sequential_multiplicative
-  residual_scale: 1.0
+  learnable_residual_scale_init: 0.0
   preserves_tensor_shape: true
-sanity_trainer: nnUNetTrainer_CBAMLiteResidual_5epochs
-formal_trainer: nnUNetTrainer_CBAMLiteResidual
+sanity_trainer: nnUNetTrainer_CBAMLiteZeroInit_5epochs
+formal_trainer: nnUNetTrainer_CBAMLiteZeroInit

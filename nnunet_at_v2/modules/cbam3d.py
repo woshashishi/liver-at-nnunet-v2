@@ -61,15 +61,15 @@ class CBAMLite3D(nn.Module):
         channels: int,
         reduction: int = 16,
         spatial_kernel_size: int = 3,
-        residual_scale: float = 1.0,
+        residual_scale_init: float = 0.0,
     ) -> None:
         super().__init__()
-        if residual_scale < 0:
+        if residual_scale_init < 0:
             raise ValueError(
-                f"residual_scale must be non-negative, got {residual_scale}"
+                f"residual_scale_init must be non-negative, got {residual_scale_init}"
             )
         self.channels = channels
-        self.residual_scale = float(residual_scale)
+        self.residual_scale = nn.Parameter(torch.tensor(float(residual_scale_init)))
         self.channel_attention = ChannelAttention3D(channels, reduction)
         self.spatial_attention = SpatialAttention3D(spatial_kernel_size)
 
