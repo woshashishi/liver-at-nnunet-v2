@@ -1,0 +1,9 @@
+status=PASS
+epochs=5
+validation_cases=27
+mean_dice_before_reload=0.32480943777638377
+mean_dice_after_reload=0.3248088688808617
+reload_difference=-5.688955220795044e-07
+liver_dice=0.6284343085061157
+tumor_dice=0.021184567046651885
+checkpoint_reload_exit_code=0

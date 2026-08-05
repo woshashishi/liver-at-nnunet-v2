@@ -1,0 +1,139 @@
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Trainer 'nnUNetTrainer_TransformerBottleneck_5epochs' not found in nnunetv2.training.nnUNetTrainer.
+Searching in external trainer paths from environment variable 'nnUNet_extTrainer'...
+Searching in: /root/autodl-tmp/nnunet_project/code/liver_at_project
+Searching for class nnUNetTrainer_TransformerBottleneck_5epochs in folder /root/autodl-tmp/nnunet_project/code/liver_at_project with current module None
+  Inspecting module: nnunet_at_v2.modules.transformer3d
+  Inspecting module: nnunet_at_v2.trainers.nnUNetTrainer_TransformerBottleneck
+Found class nnUNetTrainer_TransformerBottleneck_5epochs in nnunet_at_v2.trainers.nnUNetTrainer_TransformerBottleneck
+Using trainer 'nnUNetTrainer_TransformerBottleneck_5epochs' from: /root/autodl-tmp/nnunet_project/code/liver_at_project
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+2026-08-05 11:33:05.629811: do_dummy_2d_data_aug: False
+2026-08-05 11:33:05.630258: Using splits from existing split file: /root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/splits_final.json
+2026-08-05 11:33:05.630424: The split file contains 5 splits.
+2026-08-05 11:33:05.630463: Desired fold for training: 0
+2026-08-05 11:33:05.630494: This split has 104 training and 27 validation cases.
+using pin_memory on device 0
+using pin_memory on device 0
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 128, 128], 'median_image_size_in_voxels': [482.0, 512.0, 512.0], 'spacing': [1.0, 0.767578125, 0.767578125], 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': [32, 64, 128, 256, 320, 320], 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'strides': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'n_conv_per_stage': [2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2], 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ['conv_op', 'norm_op', 'dropout_op', 'nonlin']}, 'batch_dice': True}
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset003_Liver', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 0.767578125, 0.767578125], 'original_median_shape_after_transp': [432, 512, 512], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 5420.0, 'mean': 99.48007202148438, 'median': 101.0, 'min': -983.0, 'percentile_00_5': -15.0, 'percentile_99_5': 197.0, 'std': 37.13840103149414}}}
+
+2026-08-05 11:33:07.186305: Unable to plot network architecture:
+2026-08-05 11:33:07.186569: No module named 'hiddenlayer'
+2026-08-05 11:33:07.201140:
+2026-08-05 11:33:07.201380: Epoch 0
+2026-08-05 11:33:07.201754: Current learning rate: 0.01
+2026-08-05 11:33:44.448637: train_loss 0.1001
+2026-08-05 11:33:44.448839: val_loss 0.0114
+2026-08-05 11:33:44.448904: Pseudo dice [0.7075, 0.0]
+2026-08-05 11:33:44.448967: Epoch time: 37.25 s
+2026-08-05 11:33:44.449013: Yayy! New best EMA pseudo Dice: 0.3537
+2026-08-05 11:33:45.644673:
+2026-08-05 11:33:45.645057: Epoch 1
+2026-08-05 11:33:45.645161: Current learning rate: 0.00818
+2026-08-05 11:34:20.303049: train_loss -0.0298
+2026-08-05 11:34:20.303278: val_loss -0.0188
+2026-08-05 11:34:20.303354: Pseudo dice [0.7542, 0.0]
+2026-08-05 11:34:20.303421: Epoch time: 34.66 s
+2026-08-05 11:34:20.303469: Yayy! New best EMA pseudo Dice: 0.3561
+2026-08-05 11:34:22.013683:
+2026-08-05 11:34:22.014121: Epoch 2
+2026-08-05 11:34:22.014231: Current learning rate: 0.00631
+2026-08-05 11:34:56.727226: train_loss -0.0581
+2026-08-05 11:34:56.727478: val_loss -0.1078
+2026-08-05 11:34:56.727592: Pseudo dice [0.7859, 0.0]
+2026-08-05 11:34:56.727742: Epoch time: 34.71 s
+2026-08-05 11:34:56.727817: Yayy! New best EMA pseudo Dice: 0.3598
+2026-08-05 11:34:58.550009:
+2026-08-05 11:34:58.550491: Epoch 3
+2026-08-05 11:34:58.550633: Current learning rate: 0.00438
+2026-08-05 11:35:33.288940: train_loss -0.1736
+2026-08-05 11:35:33.289237: val_loss -0.2654
+2026-08-05 11:35:33.289317: Pseudo dice [0.8814, 0.0]
+2026-08-05 11:35:33.289392: Epoch time: 34.74 s
+2026-08-05 11:35:33.289444: Yayy! New best EMA pseudo Dice: 0.3679
+2026-08-05 11:35:35.291958:
+2026-08-05 11:35:35.292347: Epoch 4
+2026-08-05 11:35:35.292467: Current learning rate: 0.00235
+2026-08-05 11:36:10.031990: train_loss -0.1781
+2026-08-05 11:36:10.032300: val_loss -0.2429
+2026-08-05 11:36:10.032378: Pseudo dice [0.8577, 0.1181]
+2026-08-05 11:36:10.032458: Epoch time: 34.74 s
+2026-08-05 11:36:10.032522: Yayy! New best EMA pseudo Dice: 0.3799
+2026-08-05 11:36:12.289320: Training done.
+2026-08-05 11:36:12.304512: Using splits from existing split file: /root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/splits_final.json
+2026-08-05 11:36:12.304908: The split file contains 5 splits.
+2026-08-05 11:36:12.304992: Desired fold for training: 0
+2026-08-05 11:36:12.305064: This split has 104 training and 27 validation cases.
+2026-08-05 11:36:12.305275: predicting liver_101
+2026-08-05 11:36:12.979071: liver_101, shape torch.Size([1, 478, 470, 470]), rank 0
+2026-08-05 11:37:07.274238: predicting liver_11
+2026-08-05 11:37:07.743974: liver_11, shape torch.Size([1, 466, 448, 448]), rank 0
+2026-08-05 11:37:46.993907: predicting liver_112
+2026-08-05 11:37:47.473970: liver_112, shape torch.Size([1, 601, 427, 427]), rank 0
+2026-08-05 11:38:37.873629: predicting liver_115
+2026-08-05 11:38:38.631903: liver_115, shape torch.Size([1, 677, 504, 504]), rank 0
+2026-08-05 11:39:54.961528: predicting liver_12
+2026-08-05 11:39:55.349725: liver_12, shape torch.Size([1, 455, 436, 436]), rank 0
+2026-08-05 11:40:34.611476: predicting liver_120
+2026-08-05 11:40:35.305043: liver_120, shape torch.Size([1, 636, 496, 496]), rank 0
+2026-08-05 11:41:43.925991: predicting liver_128
+2026-08-05 11:41:44.522335: liver_128, shape torch.Size([1, 458, 521, 521]), rank 0
+2026-08-05 11:42:54.243799: predicting liver_17
+2026-08-05 11:42:54.993865: liver_17, shape torch.Size([1, 661, 496, 496]), rank 0
+2026-08-05 11:44:11.215932: predicting liver_19
+2026-08-05 11:44:11.727386: liver_19, shape torch.Size([1, 438, 502, 502]), rank 0
+2026-08-05 11:44:57.538733: predicting liver_24
+2026-08-05 11:44:57.939044: liver_24, shape torch.Size([1, 414, 447, 447]), rank 0
+2026-08-05 11:45:31.608824: predicting liver_25
+2026-08-05 11:45:32.107821: liver_25, shape torch.Size([1, 421, 512, 512]), rank 0
+2026-08-05 11:46:17.854096: predicting liver_27
+2026-08-05 11:46:18.483221: liver_27, shape torch.Size([1, 603, 492, 492]), rank 0
+2026-08-05 11:47:27.069717: predicting liver_3
+2026-08-05 11:47:27.641509: liver_3, shape torch.Size([1, 534, 462, 462]), rank 0
+2026-08-05 11:48:28.617574: predicting liver_38
+2026-08-05 11:48:28.882932: liver_38, shape torch.Size([1, 132, 667, 667]), rank 0
+2026-08-05 11:49:00.005663: predicting liver_40
+2026-08-05 11:49:00.271571: liver_40, shape torch.Size([1, 122, 667, 667]), rank 0
+2026-08-05 11:49:16.041565: predicting liver_41
+2026-08-05 11:49:16.268279: liver_41, shape torch.Size([1, 113, 667, 667]), rank 0
+2026-08-05 11:49:32.007138: predicting liver_42
+2026-08-05 11:49:32.264929: liver_42, shape torch.Size([1, 125, 667, 667]), rank 0
+2026-08-05 11:49:48.041101: predicting liver_44
+2026-08-05 11:49:48.296619: liver_44, shape torch.Size([1, 119, 667, 667]), rank 0
+2026-08-05 11:50:04.063058: predicting liver_5
+2026-08-05 11:50:04.816152: liver_5, shape torch.Size([1, 430, 646, 646]), rank 0
+2026-08-05 11:51:38.033986: predicting liver_51
+2026-08-05 11:51:39.013049: liver_51, shape torch.Size([1, 681, 602, 602]), rank 0
+2026-08-05 11:53:45.077126: predicting liver_52
+2026-08-05 11:53:45.846061: liver_52, shape torch.Size([1, 592, 558, 558]), rank 0
+2026-08-05 11:55:15.509639: predicting liver_58
+2026-08-05 11:55:15.904975: liver_58, shape torch.Size([1, 424, 456, 456]), rank 0
+2026-08-05 11:56:01.592304: predicting liver_64
+2026-08-05 11:56:02.159126: liver_64, shape torch.Size([1, 460, 519, 519]), rank 0
+2026-08-05 11:57:11.866951: predicting liver_70
+2026-08-05 11:57:12.146538: liver_70, shape torch.Size([1, 416, 399, 399]), rank 0
+2026-08-05 11:57:45.785198: predicting liver_75
+2026-08-05 11:57:46.221078: liver_75, shape torch.Size([1, 445, 505, 505]), rank 0
+2026-08-05 11:58:32.023010: predicting liver_77
+2026-08-05 11:58:32.557028: liver_77, shape torch.Size([1, 470, 521, 521]), rank 0
+2026-08-05 11:59:42.281229: predicting liver_82
+2026-08-05 11:59:42.593502: liver_82, shape torch.Size([1, 416, 417, 417]), rank 0
+2026-08-05 12:02:26.316483: Validation complete
+2026-08-05 12:02:26.316787: Mean Validation Dice:  0.32480943777638377
+exit_code=0
