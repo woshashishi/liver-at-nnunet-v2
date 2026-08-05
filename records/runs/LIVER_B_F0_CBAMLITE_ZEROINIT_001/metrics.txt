@@ -1,0 +1,5 @@
+baseline_mean_dice=0.8200353257447459
+cbam_mean_dice=0.8037803812230371
+cbam_liver_dice=0.9647043864773921
+cbam_tumor_dice=0.6428563759686821
+fold0_performance_gate=FAIL
