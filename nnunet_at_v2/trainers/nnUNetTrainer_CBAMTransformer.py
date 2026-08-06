@@ -10,14 +10,14 @@ from nnunetv2.utilities.plans_handling.plans_handler import (
 
 from nnunet_at_v2.trainers.nnUNetTrainer_CBAMLite import (
     EncoderStageWithCBAM,
-    nnUNetTrainer_CBAMLite,
+    nnUNetTrainer_CBAMLite as _CBAMTrainer,
 )
 from nnunet_at_v2.trainers.nnUNetTrainer_TransformerBottleneck import (
-    nnUNetTrainer_TransformerBottleneck,
+    nnUNetTrainer_TransformerBottleneck as _TransformerTrainer,
 )
 
 
-class nnUNetTrainer_CBAMTransformer(nnUNetTrainer_TransformerBottleneck):
+class nnUNetTrainer_CBAMTransformer(_TransformerTrainer):
     """
     Group D Hybrid:
     - CBAM-lite after encoder stages 3 and 4
@@ -34,7 +34,7 @@ class nnUNetTrainer_CBAMTransformer(nnUNetTrainer_TransformerBottleneck):
     ) -> nn.Module:
         # Reuse the frozen Transformer-only implementation first.
         network = (
-            nnUNetTrainer_TransformerBottleneck.build_network_architecture(
+            _TransformerTrainer.build_network_architecture(
                 plans_manager=plans_manager,
                 configuration_manager=configuration_manager,
                 num_input_channels=num_input_channels,
@@ -52,7 +52,7 @@ class nnUNetTrainer_CBAMTransformer(nnUNetTrainer_TransformerBottleneck):
             int(channel) for channel in network.encoder.output_channels
         )
         expected_channels = tuple(
-            nnUNetTrainer_CBAMLite.expected_encoder_channels
+            _CBAMTrainer.expected_encoder_channels
         )
 
         if output_channels != expected_channels:
@@ -62,18 +62,18 @@ class nnUNetTrainer_CBAMTransformer(nnUNetTrainer_TransformerBottleneck):
             )
 
         # Reuse exactly the same CBAM stages and parameters as Group B.
-        for stage_index in nnUNetTrainer_CBAMLite.cbam_stage_indices:
+        for stage_index in _CBAMTrainer.cbam_stage_indices:
             network.encoder.stages[stage_index] = EncoderStageWithCBAM(
                 stage=network.encoder.stages[stage_index],
                 channels=output_channels[stage_index],
-                reduction=nnUNetTrainer_CBAMLite.cbam_reduction,
+                reduction=_CBAMTrainer.cbam_reduction,
                 spatial_kernel_size=(
-                    nnUNetTrainer_CBAMLite.cbam_spatial_kernel_size
+                    _CBAMTrainer.cbam_spatial_kernel_size
                 ),
             )
 
         network.cbam_stage_indices = tuple(
-            nnUNetTrainer_CBAMLite.cbam_stage_indices
+            _CBAMTrainer.cbam_stage_indices
         )
         return network
 
