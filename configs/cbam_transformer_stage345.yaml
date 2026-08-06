@@ -1,0 +1,29 @@
+model_group: D
+model_name: CBAM-Transformer Hybrid
+trainer: nnUNetTrainer_CBAMTransformer
+
+dataset: Dataset003_Liver
+configuration: 3d_fullres
+plans: nnUNetPlans
+
+backbone:
+  type: official_nnUNet_PlainConvUNet
+
+cbam_lite:
+  stage_indices: [3, 4]
+  reduction: 16
+  spatial_kernel_size: 3
+  residual_scale_init: 0.0
+
+bottleneck_transformer:
+  stage_index: 5
+  num_blocks: 1
+  num_heads: 8
+  ffn_dim: 1280
+  dropout: 0.0
+  residual_scale_init: 0.0
+
+training:
+  patch_size: [128, 128, 128]
+  batch_size: 2
+  epochs: 1000
