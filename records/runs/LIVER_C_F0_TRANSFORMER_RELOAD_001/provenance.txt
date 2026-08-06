@@ -1,0 +1,13 @@
+model=C Transformer-only
+trainer=nnUNetTrainer_TransformerBottleneck
+dataset=Dataset003_Liver
+configuration=3d_fullres
+fold=0
+checkpoint=checkpoint_final.pth
+training_source_commit=a8cdb2dca7a4acabde34e70112be9b74d8c92e1a
+checkpoint_archive_commit=93d0eb9
+checkpoint_tag=transformer-fold0-v1
+reload_execution_branch=feature/hybrid-cbam-transformer
+reload_execution_commit=9f839a0922912dc2bfc0bce56844ed1fae716f79
+reload_result=PASS
+validated_cases=27

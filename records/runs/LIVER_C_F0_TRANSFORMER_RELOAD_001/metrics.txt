@@ -1,0 +1,4 @@
+Mean Dice: 0.8116476912205473
+Liver Dice: 0.965368733913351
+Tumor Dice: 0.6579266485277435
+exit_code: 0

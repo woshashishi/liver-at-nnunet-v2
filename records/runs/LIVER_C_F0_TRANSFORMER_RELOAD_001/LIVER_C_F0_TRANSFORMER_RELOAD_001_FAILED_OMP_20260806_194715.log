@@ -1,0 +1,66 @@
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Error.  nthreads must be a positive integer
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Trainer 'nnUNetTrainer_TransformerBottleneck' not found in nnunetv2.training.nnUNetTrainer.
+Searching in external trainer paths from environment variable 'nnUNet_extTrainer'...
+Searching in: /root/autodl-tmp/nnunet_project/code/liver_at_project
+Searching for class nnUNetTrainer_TransformerBottleneck in folder /root/autodl-tmp/nnunet_project/code/liver_at_project with current module None
+  Inspecting module: nnunet_at_v2.modules.cbam3d
+  Inspecting module: nnunet_at_v2.modules.transformer3d
+  Inspecting module: nnunet_at_v2.trainers.nnUNetTrainer_CBAMLite
+  Inspecting module: nnunet_at_v2.trainers.nnUNetTrainer_CBAMTransformer
+Found class nnUNetTrainer_TransformerBottleneck in nnunet_at_v2.trainers.nnUNetTrainer_CBAMTransformer
+Using trainer 'nnUNetTrainer_TransformerBottleneck' from: /root/autodl-tmp/nnunet_project/code/liver_at_project
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+2026-08-06 19:46:12.516664: Using splits from existing split file: /root/autodl-tmp/nnunet_project/nnUNet_preprocessed/Dataset003_Liver/splits_final.json
+2026-08-06 19:46:12.517102: The split file contains 5 splits.
+2026-08-06 19:46:12.517194: Desired fold for training: 0
+2026-08-06 19:46:12.517256: This split has 104 training and 27 validation cases.
+2026-08-06 19:46:12.517451: predicting liver_101
+
+libgomp: 
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: 
+libgomp: Invalid value for environment variable OMP_NUM_THREADSInvalid value for environment variable OMP_NUM_THREADS
+
+
+libgomp: 
+libgomp: Invalid value for environment variable OMP_NUM_THREADSInvalid value for environment variable OMP_NUM_THREADS
+
+2026-08-06 19:46:13.363747: liver_101, shape torch.Size([1, 478, 470, 470]), rank 0
+Error.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integerError.  nthreads must be a positive integer
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+2026-08-06 19:47:08.636230: predicting liver_11
+2026-08-06 19:47:09.137680: liver_11, shape torch.Size([1, 466, 448, 448]), rank 0
