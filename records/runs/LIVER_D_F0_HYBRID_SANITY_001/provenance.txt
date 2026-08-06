@@ -1,0 +1,8 @@
+model=D Hybrid
+trainer=nnUNetTrainer_CBAMTransformer_5epochs
+dataset=Dataset003_Liver
+configuration=3d_fullres
+fold=0
+epochs=5
+source_commit=1f69bd554341d460640b2aff3c890ecd8e391a33
+result=PASS

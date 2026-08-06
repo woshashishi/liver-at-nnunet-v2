@@ -1,0 +1,6 @@
+dataset.json  403 bytes
+liver_0.nii.gz  78052 bytes
+liver_0.npz  178065780 bytes
+liver_0.pkl  498 bytes
+plans.json  16289 bytes
+predict_from_raw_data_args.json  475 bytes
