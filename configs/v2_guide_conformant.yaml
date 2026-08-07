@@ -1,0 +1,53 @@
+version: v2
+status: development_specification
+
+dataset:
+  id: 3
+  name: Dataset003_Liver
+  configuration: 3d_fullres
+  plans: nnUNetPlans
+  folds: [0, 1, 2, 3, 4]
+
+common_training:
+  patch_size: [128, 128, 128]
+  batch_size: 2
+  epochs: 1000
+  amp: true
+  same_splits: true
+  same_augmentation: true
+  same_loss: true
+  same_optimizer_schedule: true
+
+attention:
+  module: CBAMLite3D
+  plan_aware: true
+  anisotropy_aware: true
+  stage_rule: last_two_valid_skip_stages_excluding_stage0
+  spatial_kernel_rule:
+    anisotropic: [1, 3, 3]
+    isotropic: [3, 3, 3]
+  channel_reduction: 16
+  residual_scale_init: 0.0
+
+transformer:
+  location: encoder_bottleneck
+  blocks: 1
+  heads: 4
+  embedding_dim: 256
+  mlp_ratio: 2
+  ffn_dim: 512
+  dropout: 0.0
+  positional_encoding: dynamic_depthwise_conv3d
+  residual_scale_init: 0.0
+
+model_matrix:
+  A: official_nnunet
+  B: attention_only
+  C: transformer_only
+  D: attention_plus_transformer
+
+fairness:
+  B_and_D_share_attention: true
+  C_and_D_share_transformer: true
+  hybrid_specific_tuning: false
+  fold0_dice_parameter_search: false
