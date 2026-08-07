@@ -22,6 +22,9 @@ attention:
   module: CBAMLite3D
   plan_aware: true
   anisotropy_aware: true
+  anisotropy_threshold: 2.0
+  stage_spacing_rule: input_spacing_times_cumulative_strides
+  anisotropic_axis_rule: prefer_stage_kernel_then_largest_spacing_axis
   stage_rule: last_two_valid_skip_stages_excluding_stage0
   spatial_kernel_rule:
     anisotropic: [1, 3, 3]
