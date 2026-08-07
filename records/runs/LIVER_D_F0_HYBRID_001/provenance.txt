@@ -1,0 +1,10 @@
+run_id=LIVER_D_F0_HYBRID_001
+model=D Hybrid
+trainer=nnUNetTrainer_CBAMTransformer
+dataset=Dataset003_Liver
+configuration=3d_fullres
+fold=0
+epochs=1000
+source_commit=e23ba5fe45a8643c778803e3e5f17bb66ae0fd7d
+training_exit_code=0
+reload_exit_code=0

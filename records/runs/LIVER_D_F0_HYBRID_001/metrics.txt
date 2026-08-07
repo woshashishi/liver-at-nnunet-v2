@@ -1,0 +1,10 @@
+before_reload
+Mean Dice : 0.8047601768143064
+Liver Dice: 0.9651496823866471
+Tumor Dice: 0.6443706712419659
+
+after_reload
+Mean Dice : 0.8047579370456366
+Liver Dice: 0.9651494412268887
+Tumor Dice: 0.6443664328643846
+
