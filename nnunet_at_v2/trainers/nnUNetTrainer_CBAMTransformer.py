@@ -9,7 +9,7 @@ from nnunetv2.utilities.plans_handling.plans_handler import (
 )
 
 from nnunet_at_v2.trainers.nnUNetTrainer_CBAMLite import (
-    EncoderStageWithCBAM,
+    add_plan_aware_cbam,
     nnUNetTrainer_CBAMLite as _CBAMTrainer,
 )
 from nnunet_at_v2.trainers.nnUNetTrainer_TransformerBottleneck import (
@@ -17,11 +17,18 @@ from nnunet_at_v2.trainers.nnUNetTrainer_TransformerBottleneck import (
 )
 
 
-class nnUNetTrainer_CBAMTransformer(_TransformerTrainer):
+class nnUNetTrainer_CBAMTransformer(
+    _TransformerTrainer
+):
     """
     Group D Hybrid:
-    - CBAM-lite after encoder stages 3 and 4
-    - residual bottleneck Transformer after encoder stage 5
+
+    - exactly the same plan-aware CBAM implementation
+      as Group B
+    - exactly the same bottleneck Transformer
+      implementation as Group C
+
+    No Hybrid-specific Attention tuning.
     """
 
     @staticmethod
@@ -32,56 +39,49 @@ class nnUNetTrainer_CBAMTransformer(_TransformerTrainer):
         num_output_channels: int,
         enable_deep_supervision: bool = True,
     ) -> nn.Module:
-        # Reuse the frozen Transformer-only implementation first.
+
+        # Build the Transformer-only network first.
+        # This guarantees C and D share the same
+        # Transformer implementation.
         network = (
-            _TransformerTrainer.build_network_architecture(
+            _TransformerTrainer
+            .build_network_architecture(
                 plans_manager=plans_manager,
                 configuration_manager=configuration_manager,
                 num_input_channels=num_input_channels,
                 num_output_channels=num_output_channels,
-                enable_deep_supervision=enable_deep_supervision,
-            )
-        )
-
-        if not hasattr(network, "encoder") or not hasattr(network.encoder, "stages"):
-            raise TypeError(
-                "Hybrid integration expects network.encoder.stages"
-            )
-
-        output_channels = tuple(
-            int(channel) for channel in network.encoder.output_channels
-        )
-        expected_channels = tuple(
-            _CBAMTrainer.expected_encoder_channels
-        )
-
-        if output_channels != expected_channels:
-            raise RuntimeError(
-                "Unexpected encoder channels. "
-                f"Expected {expected_channels}, got {output_channels}."
-            )
-
-        # Reuse exactly the same CBAM stages and parameters as Group B.
-        for stage_index in _CBAMTrainer.cbam_stage_indices:
-            network.encoder.stages[stage_index] = EncoderStageWithCBAM(
-                stage=network.encoder.stages[stage_index],
-                channels=output_channels[stage_index],
-                reduction=_CBAMTrainer.cbam_reduction,
-                spatial_kernel_size=(
-                    _CBAMTrainer.cbam_spatial_kernel_size
+                enable_deep_supervision=(
+                    enable_deep_supervision
                 ),
             )
-
-        network.cbam_stage_indices = tuple(
-            _CBAMTrainer.cbam_stage_indices
         )
+
+        # Add exactly the same Attention implementation
+        # and parameters used by Group B.
+        network = add_plan_aware_cbam(
+            network=network,
+            configuration_manager=configuration_manager,
+            reduction=_CBAMTrainer.cbam_reduction,
+            stage_count=_CBAMTrainer.cbam_stage_count,
+            anisotropy_threshold=(
+                _CBAMTrainer
+                .cbam_anisotropy_threshold
+            ),
+            residual_scale_init=(
+                _CBAMTrainer
+                .cbam_residual_scale_init
+            ),
+        )
+
         return network
 
 
 class nnUNetTrainer_CBAMTransformer_5epochs(
     nnUNetTrainer_CBAMTransformer
 ):
-    """Five-epoch Hybrid engineering sanity trainer."""
+    """
+    Five-epoch Hybrid engineering sanity trainer.
+    """
 
     def __init__(
         self,
@@ -91,6 +91,7 @@ class nnUNetTrainer_CBAMTransformer_5epochs(
         dataset_json: dict,
         device: torch.device = torch.device("cuda"),
     ) -> None:
+
         super().__init__(
             plans=plans,
             configuration=configuration,
@@ -98,4 +99,5 @@ class nnUNetTrainer_CBAMTransformer_5epochs(
             dataset_json=dataset_json,
             device=device,
         )
+
         self.num_epochs = 5
