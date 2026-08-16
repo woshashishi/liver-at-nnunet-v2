@@ -1,0 +1,42 @@
+dataset: Dataset003_Liver
+configuration: 3d_fullres
+development_fold: 0
+
+models:
+  A: nnUNetTrainer
+  B: nnUNetTrainer_CBAMLiteV2
+  C: nnUNetTrainer_TransformerBottleneckV2
+  D: nnUNetTrainer_CBAMTransformerV2
+
+primary_casewise_metrics:
+  - liver_dice
+  - tumor_dice
+  - tumor_precision
+  - tumor_recall
+  - lesion_recall
+  - fp_per_case
+
+failure_diagnostics:
+  - inside_liver_fp_voxels
+  - outside_liver_fp_voxels
+  - largest_outside_fp_component
+  - prediction_to_gt_volume_ratio
+
+fixed_failure_cases:
+  shared_hard_negative:
+    - liver_42
+  cbam_specific:
+    - liver_101
+  hybrid_specific:
+    - liver_24
+  transformer_improvement:
+    - liver_77
+  hybrid_improvement:
+    - liver_44
+
+interpretation_rules:
+  - Do not exclude catastrophic cases from reported metrics.
+  - Do not use GT liver masks for prediction postprocessing.
+  - Do not change evaluation rules after viewing v2 Fold0.
+  - Inspect precision and outside-FP together with tumor Dice.
+  - Treat Fold0 as development screening, not final evidence.

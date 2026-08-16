@@ -1,0 +1,142 @@
+{
+  "dataset": "Dataset003_Liver",
+  "configuration": "3d_fullres",
+  "spacing": [
+    1.0,
+    0.767578125,
+    0.767578125
+  ],
+  "patch_size": [
+    128,
+    128,
+    128
+  ],
+  "kernel_sizes": [
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3
+    ]
+  ],
+  "strides": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "stage_shapes": [
+    [
+      128,
+      128,
+      128
+    ],
+    [
+      64,
+      64,
+      64
+    ],
+    [
+      32,
+      32,
+      32
+    ],
+    [
+      16,
+      16,
+      16
+    ],
+    [
+      8,
+      8,
+      8
+    ],
+    [
+      4,
+      4,
+      4
+    ]
+  ],
+  "B_v2": {
+    "attention_stage_rule": "last 2 valid skip stages, excluding Stage0 and bottleneck",
+    "resolved_stages": [
+      3,
+      4
+    ],
+    "resolved_kernels": {
+      "3": [
+        3,
+        3,
+        3
+      ],
+      "4": [
+        3,
+        3,
+        3
+      ]
+    },
+    "residual_scale_init": 0.0
+  },
+  "C_v2": {
+    "stage": "final encoder bottleneck",
+    "embedding_cap": 256,
+    "heads": 4,
+    "mlp_ratio": 2,
+    "ffn_dim_on_liver": 512,
+    "residual_scale_init": 0.0
+  },
+  "D_v2": {
+    "attention": "exact B_v2",
+    "transformer": "exact C_v2"
+  }
+}
