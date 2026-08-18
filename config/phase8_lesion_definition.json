@@ -1,0 +1,38 @@
+{
+  "dataset": "Dataset003_Liver",
+  "target_label": 2,
+  "lesion_connectivity": 26,
+  "minimum_gt_lesion_voxels": 1,
+  "minimum_predicted_lesion_voxels": 1,
+  "component_filtering": "none",
+  "lesion_detection_match_rule": "any_voxel_overlap",
+  "size_stratification": {
+    "basis": "GT 26-connected component physical volume in mm3",
+    "rule": "dataset-level tertiles frozen before formal cross-validation",
+    "small": {
+      "volume_mm3_max_inclusive": 213.75833253589173
+    },
+    "medium": {
+      "volume_mm3_min_exclusive": 213.75833253589173,
+      "volume_mm3_max_inclusive": 1414.2464082456415
+    },
+    "large": {
+      "volume_mm3_min_exclusive": 1414.2464082456415
+    },
+    "reference_equivalent_diameter_mm": {
+      "p33": 7.418362125206314,
+      "p67": 13.926449104150722
+    }
+  },
+  "audit": {
+    "n_cases": 131,
+    "n_tumor_positive_cases": 118,
+    "n_tumor_free_cases": 13,
+    "n_components_connectivity_6": 1037,
+    "n_components_connectivity_26": 908,
+    "one_voxel_components_conn6": 103,
+    "one_voxel_components_conn26": 18,
+    "le5_components_conn6": 140,
+    "le5_components_conn26": 35
+  }
+}
