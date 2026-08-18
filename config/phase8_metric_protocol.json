@@ -1,0 +1,73 @@
+{
+  "version": "phase8-v1",
+  "dataset": "Dataset003_Liver",
+  "labels": {
+    "background": 0,
+    "liver": 1,
+    "tumor": 2
+  },
+  "liver_metric_definition": {
+    "mask": "label_1_only",
+    "note": "Matches class-wise nnU-Net evaluation."
+  },
+  "surface_metrics": {
+    "implementation": "surface-distance==0.1",
+    "distance_unit": "mm",
+    "spacing_source": "NIfTI header",
+    "hd95_percentile": 95.0,
+    "nsd_tolerance_mm": 3.0,
+    "assd_definition": "arithmetic mean of area-weighted GT-to-pred and pred-to-GT average surface distances",
+    "single_empty_policy": "image_physical_diagonal_penalty",
+    "single_empty_nsd": 0.0
+  },
+  "tumor_primary_population": "GT tumor-positive cases only",
+  "empty_mask_policy": {
+    "gt_positive_pred_empty": {
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "nsd": 0.0,
+      "hd95": "image_physical_diagonal_mm",
+      "assd": "image_physical_diagonal_mm",
+      "surface_failure": true
+    },
+    "gt_empty_pred_positive": {
+      "primary_tumor_metrics": null,
+      "evaluate_as_tumor_free_false_positive": true
+    },
+    "gt_empty_pred_empty": {
+      "primary_tumor_metrics": null,
+      "tumor_free_false_positive": 0
+    }
+  },
+  "lesion_level": {
+    "connectivity": 26,
+    "minimum_gt_lesion_voxels": 1,
+    "minimum_predicted_lesion_voxels": 1,
+    "matching": "any_voxel_overlap",
+    "matching_semantics": "many-to-many overlap; any predicted tumor voxel overlapping a GT component detects that GT lesion",
+    "size_stratification": {
+      "basis": "GT 26-connected component physical volume in mm3",
+      "rule": "dataset-level tertiles frozen before formal cross-validation",
+      "small": {
+        "volume_mm3_max_inclusive": 213.75833253589173
+      },
+      "medium": {
+        "volume_mm3_min_exclusive": 213.75833253589173,
+        "volume_mm3_max_inclusive": 1414.2464082456415
+      },
+      "large": {
+        "volume_mm3_min_exclusive": 1414.2464082456415
+      },
+      "reference_equivalent_diameter_mm": {
+        "p33": 7.418362125206314,
+        "p67": 13.926449104150722
+      }
+    }
+  },
+  "tumor_fp_definition": {
+    "inside_liver_fp": "pred_tumor AND NOT gt_tumor AND gt_label_in_{1,2}",
+    "outside_liver_fp": "pred_tumor AND NOT gt_tumor AND gt_label_0",
+    "largest_outside_component_connectivity": 26
+  }
+}
